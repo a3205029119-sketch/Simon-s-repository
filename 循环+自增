@@ -5,12 +5,13 @@
 int main(void) {
     int i;
     int n;
-    int sum = 0;
-    int dominator = 0;
+    double sum = 0;
+    int denominator = 0;
     printf("Enter the number of n : ");
     scanf("%d", &n);
     for (i = 1;i<=n;i++) {
-        dominator = dominator + i;
-        sum = sum + dominator/1;
+        denominator = denominator + i;
+        sum = sum + 1.0/denominator;
     }
+    printf("The sum  is : %f", sum);
 }
