@@ -1,0 +1,16 @@
+#include <stdio.h>
+//24、编写程序,功能是：根据以下攻势计算s,并输出计算结果；n由用户输入。S=1+1/(1+2)+1/(1+2+3)+…….+1/(1+2+3+4+……+n)
+//关键在于，你需要一个外层循环来遍历每一项（从 i=1 到 n），并且在循环内部，你需要一个变量来累加分母的值。
+//把除了n以外的数字看成整体然后+n 就是可以用自增来写
+int main(void) {
+    int i;
+    int n;
+    int sum = 0;
+    int dominator = 0;
+    printf("Enter the number of n : ");
+    scanf("%d", &n);
+    for (i = 1;i<=n;i++) {
+        dominator = dominator + i;
+        sum = sum + dominator/1;
+    }
+}
