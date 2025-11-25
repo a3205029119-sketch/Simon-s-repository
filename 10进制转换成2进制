@@ -1,0 +1,18 @@
+f = str(input("请输入二进制数："))
+length = len(f)
+summ = 0
+binary = []
+f = int(f)        
+while f > 0: 
+    T = f % 10 #取余数（把个位依次取出来）
+    binary.append(T)
+    f = f//10 #把个位给去掉让十位取代之前的个位
+    
+n = 0 #计数器#
+
+for i in binary:
+    i = i*(2**n)
+    summ = summ + i
+    n = n+1
+print(f"转换成十进制之后是：{summ}")
+#输入101之后输出结果为5#
